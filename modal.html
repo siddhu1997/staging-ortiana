@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Modal Testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css" media="screen,projection" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        $('.modal').modal();
+    });
+</script>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="container">
+            <div class="modal-content ">
+                <div class="row center-align">
+                    <h5>Login</h5>
+                </div>
+                <div class="row">
+                    <div class="col s4">&nbsp;</div>
+                    <form class="col">
+                        <div class="row">
+                            <div class="input-field col">
+                                <input id="icon_prefix" type="text" class="validate">
+                                <label for="icon_prefix">Enter your email address</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col">
+                                <input id="icon_telephone" type="password">
+                                <label for="icon_telephone">Enter Password</label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col s4">&nbsp;</div>
+                </div>
+                <div class="row center-align">
+                    <a class="green-sign-up-button">Submit</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+<script type="text/javascript" src="javascripts/materialize.min.js"></script>
+
+</html>

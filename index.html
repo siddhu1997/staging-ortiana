@@ -5,24 +5,31 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="stylesheets/index.css" media="screen" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Home</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+<script>
+  $(document).ready(function () {
+    $('.modal').modal();
+  });
+</script>
 
 <body>
   <header>
     <div class="container">
       <div class="row">
         <div class="col s12">
-          &nbsp;
         </div>
       </div>
       <div class="row">
         <div class="col s12">
           <nav class="no-box-shadow">
             <div class="nav-wrapper white">
-              <a class="brand-logo left-align correct-brand-position black-text">Ortiana Relaties</a>
+              <a class="brand-logo left-align correct-brand-position black-text"
+                style="font-family: 'Inter', sans-serif; font-weight: 400px; color: rgb(34, 24, 8);">Ortiana
+                Realties</a>
               <a data-target="menu_list" class="sidenav-trigger float-right black-text"><i
                   class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
@@ -30,18 +37,52 @@
                 <li><a class="black-text nav-gap" href="#">ABOUT US</a></li>
                 <li><a class="black-text nav-gap" href="#">TESTIMONIALS</a></li>
                 <!-- <li><div class="black-text green-sign-up-button-wrapper" >&nbsp;<a href="#"><span class="green-sign-up-button">Sign In/Sign Up</span></a></div></li> -->
-                <li class="black-text green-sign-up-button-wrapper"><a class="green-sign-up-button">Sign Up/Sign In</a>
+                <li class="black-text green-sign-up-button-wrapper" style="padding-left: 10px;"><a
+                    class="green-sign-up-button modal-trigger" href="#modal1">Sign
+                    Up/Sign In</a>
+                  <!-- Modal Structure -->
+                  <div id="modal1" class="modal">
+                    <div class="container">
+                      <div class="modal-content ">
+                        <div class="row center-align">
+                          <h5>Login</h5>
+                        </div>
+                        <div class="row">
+                          <form class="col">
+                            <div class="row">
+                              <div class="input-field col">
+                                <input id="icon_prefix" type="text" class="validate">
+                                <label for="icon_prefix">Enter your email address</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="input-field col">
+                                <input id="icon_telephone" type="password">
+                                <label for="icon_telephone">Enter Password</label>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="row center-align">
+                          <a class="green-sign-up-button center-align" href="#">Submit</a>
+                        </div>
+                      </div>
+                    </div>
                 </li>
               </ul>
             </div>
+
+
           </nav>
           <ul class="sidenav" id="menu_list">
-            <li><span class="sidenav-close"><i style="padding: 15px;" class="material-icons">arrow_forward</i>&nbsp;</span><span style="font-size: 20px; font-weight: 500;">MENU</span></li>
+            <li><span class="sidenav-close"><i style="padding: 15px;"
+                  class="material-icons">arrow_forward</i>&nbsp;</span><span
+                style="font-size: 20px; font-weight: 500;">MENU</span></li>
             <li><a href="#">SERVICES</a></li>
             <li><a href="#">ABOUT US</a></li>
             <li><a href="#">TESTIMONIALS</a></li>
             <li>
-              <img src="images/logo.svg"/>
+              <img src="images/logo.svg" />
             </li>
           </ul>
         </div>
@@ -209,22 +250,8 @@
     </div>
   </section>
 
-  <section class="grey lighten-4" style="min-height: 100vh;">
-    &nbsp;<br/>&nbsp;<br/>
-    <h4 class="center-align">SERVICES</h4>
-  </section>
-  
-  <section class="grey lighten-5" style="min-height: 100vh;">
-    &nbsp;<br/>&nbsp;<br/>
-    <h4 class="center-align">ABOUT US</h4>
-  </section>
-  
-  <section class="grey lighten-4" style="min-height: 100vh;">
-    &nbsp;<br/>&nbsp;<br/>
-    <h4 class="center-align">TESTIMONIALS</h4>
-  </section>
-  
-  <footer class="black white-text center-align" style="height: 30px; padding-top: 3px;">&copy; All rights Reserved.</footer>
+  <footer class="black white-text center-align hide" style="height: 30px; padding-top: 3px;">&copy; All rights Reserved.
+  </footer>
 
   <script type="text/javascript" src="javascripts/materialize.min.js"></script>
   <script type="text/javascript" src="javascripts/index.js"></script>
@@ -237,6 +264,7 @@
       });
     });
   </script>
+
   <script>
     var slideIndex = 0;
     const slides = document.getElementsByClassName("slide");
@@ -260,13 +288,13 @@
 
     showSlidesOnClick(1);
 
-    setInterval(function(){
-      slideIndex = slideIndex+1;
-      if(slideIndex>3){
+    setInterval(function () {
+      slideIndex = slideIndex + 1;
+      if (slideIndex > 3) {
         slideIndex = 1;
       }
       showSlidesOnClick(slideIndex);
-    } ,2000);
+    }, 6000);
   </script>
 </body>
 
